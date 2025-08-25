@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/api/user",
-      "destination": "data:application/json,{\"id\":\"123\",\"name\":\"Gemini\",\"message\":\"这次是通过 Data URL 成功生成的 API 响应！\"}"
+      "destination": "data:application/json;charset=utf-8,%7B%22id%22%3A%22123%22%2C%22name%22%3A%22Gemini%22%2C%22message%22%3A%22%E8%BF%99%E6%AC%A1%E6%98%AF%E9%80%9A%E8%BF%87%20Data%20URL%20%E6%88%90%E5%8A%9F%E7%94%9F%E6%88%90%E7%9A%84%20API%20%E5%93%8D%E5%BA%94%EF%BC%81%22%7D"
     },
     {
       "source": "/",
