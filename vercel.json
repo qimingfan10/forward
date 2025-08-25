@@ -1,14 +1,31 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Vercel-Test",
-          "value": "Success! The vercel.json file was detected."
-        }
-      ]
+      "src": "/api/user",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "body": {
+        "id": "123",
+        "name": "Gemini",
+        "message": "这是直接由 vercel.json 生成的 API 响应！"
+      }
+    },
+    {
+      "src": "/",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "body": "<h1>欢迎使用 Vercel</h1><p>这个页面也是由 vercel.json 直接提供的。</p>"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/google",
+      "destination": "https://www.google.com",
+      "permanent": true
     }
   ]
 }
